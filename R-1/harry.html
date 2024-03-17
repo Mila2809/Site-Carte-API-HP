@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="LOGO.png">
+    <link rel="stylesheet" href="harry.css">
+</head>
+<body>
+
+
+<!-- DEBUT TETE -->
+    <h1><img class="logo" src="logo-Harry.webp" alt=""></h1>
+    <h2 ><img class="name" src="Harry-Potter-titre.png" alt=""></h2>
+    <div class="tre">tre</div>
+    <nav class="navbar">
+        <li><a href="harry.html">Menu</a></li>
+        <li><a href="">Maison</a></li><!-- pour plus tard -->
+        <li><a href="">mode nuit</a></li> <!-- pour plus tard -->
+        <li><a href="" id="btnplay">musique</a></li> <!-- ce qui était censé activer ma musique -->
+    </nav>
+<!-- FIN TETE -->
+
+<!-- DEBUT tentative de musique en travaux -->
+<audio id="MaMusic">
+    <source src="38050 (3).mp3" type="audio/mp3">
+</audio>
+<script>
+    var MaMusique = document.getElementById("MaMusic")
+    var MaMusique = document.getElementById("btnplay")
+    btnplay.onclick = function(){
+        MaMusique.play();
+    }
+</script>
+<!-- FIN tentative de musique en travaux -->
+
+
+<!-- DEBUT API -->
+<div id="characters"></div>
+<script>
+    function fetchCharacters() {
+        
+        return fetch('https://hp-api.lainocs.fr/characters')
+        .then((response) => response.json())
+    }
+    
+        async function displayCharacters() {
+            const data = await fetchCharacters()
+        data.forEach(character => {
+            document.querySelector('#characters').innerHTML += `
+            <div class="A2">
+                <a href ="hp-carte.html?slug=${character.slug}">
+                    <div class="character">
+                        <img class="perso" src="${character.image}" alt="${character.name}">
+                        <h3>${character.name}</h3>
+                    </div>
+                </a>        
+            </div>
+            `
+        });
+    }
+
+    displayCharacters()
+    </script>
+<!-- FIN API -->
+
+
+<!-- DEBUT FIN -->
+<button ><a href="#top"><img class="fleche" src="fleche-haut.jpg" alt=""></a></button> <!-- pour remonter plus simplement -->
+<footer>
+    <h4>Mentions légales</h4>
+</footer>
+<!-- FIN FIN -->
+
+
+</body>
+</html>

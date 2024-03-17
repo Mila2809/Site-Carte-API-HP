@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="LOGO.png">
+    <link rel="stylesheet" href="hp-carte.css">
+</head>
+<body>
+
+
+<!-- DEBUT TETE -->
+<h1><img class="logo" src="logo-Harry.webp" alt=""></h1>
+<h2><img class="name" src="Harry-Potter-titre.png" alt=""></h2>
+<div class="tre">tre</div>
+<nav class="navbar">
+    <li><a href="harry.html">Menu</a></li>
+    <li><a href="">Maison</a></li>
+    <li><a href="">mode nuit</a></li>
+    <li><a href="">musique</a></li>
+</nav>
+<!-- FIN TETE -->
+
+
+
+
+
+<!-- DEBUT API -->
+    <div id="character"></div>
+    <script>
+        function fetchCharacters() {
+            let url = window.location.search
+            let slug = new URLSearchParams(url).get('slug')
+            return fetch('https://hp-api.lainocs.fr/characters/' + slug)
+                .then((response) => response.json())
+        }
+
+        async function displayCharacters() {
+            const data = await fetchCharacters()
+            document.querySelector('#character').innerHTML = `
+        <div class="AB">
+            <div class="AA">
+                <div class="A2">
+                    <img id="imagesingle">
+                    <img class="perso" src="${data.image}" alt="${data.name}" >
+                    <h3>${data.name}</h3>
+                </div>
+            </div>
+            <div class="A3">
+                <p>House : ${data.house}</p>
+                <p>Actor : ${data.actor}</p>
+                <p>Blood : ${data.blood}</p>
+                <p>Wand : ${data.wand}</p>
+                <p>Patronus : ${data.patronus}</p>
+                <p>Role : ${data.role}</p>
+            </div>
+        </div>
+            `
+            let element = document.getElementById('imagesingle');// pour que le resulta depande de la maison
+                if(data.house == 'Slytherin') {element.classList.add('Slytherin')}
+                else if(data.house == 'Ravenclaw') {element.classList.add('Ravenclaw')}
+                else if(data.house == 'Gryffindor') {element.classList.add('Gryffindor')}
+                else if(data.house == 'Hufflepuff') {element.classList.add('Hufflepuff')}
+                else {element.classList.add('Other')}
+        }
+
+
+
+        displayCharacters()
+    </script>
+<!-- FIN API -->
+
+
+<!-- DEBUT FIN -->
+<footer>
+    <h4>Mentions légales</h4>
+</footer>
+<!-- FIN FIN -->
+
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: rgb(216, 226, 232);
+    background-image: url(fond.png);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* DEBUT TETE */
+h1{
+    background-color: rgb(29, 49, 61)
+}
+.logo{
+    width: 5%;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: -3%;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background-color: rgb(29, 49, 61);
+}
+.name{
+    width: 15%;
+}
+.tre{
+    font-size: 0.25em;
+    background-color: rgb(45, 70, 87);
+    color: rgb(45, 70, 87);
+}
+.navbar{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: rgb(29, 49, 61);
+}
+.navbar a {
+    color: aliceblue;
+}
+/* FIN TETE */
+
+.AB{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AA{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 2.5%;
+    margin-right: 30px;
+}
+
+.A2{
+    height: 560px;
+    width: 400px;
+}
+
+.perso{
+    height: 450px;
+    width: 400px;
+    margin-top: 11.5%;
+    object-fit: contain;
+    margin-top: -350%;
+}
+h3{
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5%;
+    color: rgb(29, 49, 61);
+}
+
+.Slytherin{
+    margin-top: 6%;
+    background-image: url(SER.png);
+    height: 560px;
+    width: 411px;
+    margin-bottom: -21%;
+}
+.Ravenclaw{
+    margin-top: 6%;
+    background-image: url(serd.png);
+    height: 560px;
+    width: 411px;
+    margin-bottom: -21%;
+}
+.Gryffindor{
+    margin-top: 6%;
+    background-image: url(Gry.png);
+    height: 560px;
+    width: 411px;
+    margin-bottom: -21%;
+}
+.Hufflepuff{
+    margin-top: 6%;
+    background-image: url(hup.png);
+    height: 560px;
+    width: 411px;
+    margin-bottom: -21%;
+}
+.Other{
+    margin-top: 6%;
+    background-image: url(AUTRE.png);
+    height: 560px;
+    width: 411px;
+    margin-bottom: -21%;
+}
+
+
+.A3{
+    background-color: rgb(167, 178, 186);
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+p{
+    margin: 5%;
+    font-size: larger;
+    color: rgb(29, 49, 61);
+    font-style: oblique;
+}
+
+
+
+/* DEBUT FIN */
+h4{
+    display: flex;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-left: 1%;
+}
+footer{
+    background-color: rgb(29, 49, 61);
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+}
+/* FIN FIN */
+
+
+
+/* DEBUT RESPONSIV */
+@media all and (max-device-width: 480px){ 
+/* DEBUT TETE */.logo{
+    width: 15%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+h2{
+    margin-top: -5%;
+}
+.name{
+    width: 50%;
+}
+.navbar{
+    padding-top: 3%;
+    padding-bottom: 3%;
+}/* FIN TETE */
+
+.AB{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.Slytherin{
+    margin-left: -1.5%;
+}
+.Ravenclaw{
+    margin-left: -1.5%;
+}
+.Gryffindor{
+    margin-left: -1.5%;
+}
+.Hufflepuff{
+    margin-left: -1.5%;
+}
+.Other{
+    margin-left: -1.5%;
+}
+.AA{
+    margin: 0%;
+    margin-bottom: 13%;
+}
+.A3{
+    margin: 0%;
+}
+
+footer{
+    margin-top: 8%;
+    }
+}
+/* FIN RESPONSIV */
