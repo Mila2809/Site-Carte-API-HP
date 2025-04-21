@@ -28,4 +28,6 @@ Ce site permet aux fans d’Harry Potter de :
 
 ---
 
+## Aperçu du rendu
+
 ![image](https://github.com/user-attachments/assets/a85bc519-be13-4770-9bff-542a740681e3)
