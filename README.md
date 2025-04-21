@@ -25,3 +25,7 @@ Ce site permet aux fans d’Harry Potter de :
   - **Profil** : informations de l’utilisateur
   - **Inventaire** : cartes possédées par l’utilisateur
 - **Page Booster** : ouvrir un booster pour recevoir 5 cartes aléatoires
+
+---
+
+![image](https://github.com/user-attachments/assets/a85bc519-be13-4770-9bff-542a740681e3)
